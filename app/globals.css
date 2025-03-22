@@ -1,0 +1,241 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --luxury-gold: 211 175 55;
+  --luxury-navy: 52 73 94;
+  --luxury-cream: 245 245 245;
+  --luxury-rose: 232 206 191;
+  --luxury-charcoal: 51 51 51;
+  --luxury-light-gold: 230 215 155;
+  --luxury-dark-gold: 184 134 11;
+  --luxury-light-blue: 214 234 248;
+}
+
+body {
+  background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa);
+  color: rgb(var(--luxury-charcoal));
+}
+
+@layer components {
+  .luxury-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .luxury-gradient {
+    background: linear-gradient(135deg, #d4af37 0%, #f2d680 50%, #d4af37 100%);
+  }
+
+  .luxury-text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#b38728] via-[#d4af37] to-[#cfc09f];
+  }
+
+  .luxury-blue-gradient {
+    background: linear-gradient(135deg, #34495e 0%, #587ea0 100%);
+  }
+
+  .luxury-card {
+    @apply bg-white border border-[#e6e6e6] shadow-md hover:shadow-lg transition-all duration-300 rounded-lg overflow-hidden;
+  }
+
+  .luxury-button {
+    @apply bg-gradient-to-r from-[#d4af37] to-[#b38728] text-white font-medium py-2 px-6 rounded-full shadow-md hover:shadow-lg transition-all duration-300 hover:from-[#b38728] hover:to-[#d4af37];
+  }
+
+  .luxury-button-outline {
+    @apply bg-transparent border border-[#d4af37] text-[#b38728] font-medium py-2 px-6 rounded-full shadow-sm hover:shadow-md transition-all duration-300 hover:bg-[#fcf9ed] hover:border-[#b38728];
+  }
+
+  .luxury-section {
+    @apply py-20;
+  }
+
+  .luxury-heading {
+    @apply text-3xl md:text-4xl font-bold mb-4 luxury-text-gradient;
+  }
+
+  .luxury-subheading {
+    @apply text-xl md:text-2xl font-semibold mb-3 text-[#34495e];
+  }
+
+  .luxury-divider {
+    @apply w-24 h-1 bg-gradient-to-r from-[#d4af37] to-[#b38728] rounded-full mx-auto my-6;
+  }
+
+  .luxury-badge {
+    @apply bg-[#f8f4e3] text-[#b38728] px-3 py-1 rounded-full text-sm font-medium border border-[#e6d7a7];
+  }
+
+  .luxury-input {
+    @apply border border-[#e6e6e6] rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#d4af37] focus:border-transparent transition-all duration-300;
+  }
+
+  .luxury-card-hover {
+    @apply transition-all duration-300 hover:-translate-y-2;
+  }
+
+  .luxury-icon {
+    @apply text-[#d4af37];
+  }
+
+  .luxury-nav-link {
+    @apply text-[#34495e] hover:text-[#d4af37] transition-colors duration-300;
+  }
+
+  .luxury-nav-link-active {
+    @apply text-[#d4af37] font-medium;
+  }
+
+  .shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer-effect::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(30deg);
+    animation: shimmer 6s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) rotate(30deg);
+    }
+    100% {
+      transform: translateX(100%) rotate(30deg);
+    }
+  }
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 210 30% 98%; /* Soft Warm White */
+    --foreground: 220 10% 20%; /* Dark Slate */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 10% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 25%;
+
+    --primary: 210 75% 60%; /* Soft Sky Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 40% 90%; /* Pale Ice Blue */
+    --secondary-foreground: 220 10% 25%;
+
+    --muted: 220 15% 85%; /* Light Mist Gray */
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 280 45% 65%; /* Light Lavender */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 65% 55%; /* Softer Red */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 80%;
+    --input: 220 15% 80%;
+    --ring: 210 75% 60%;
+
+    /* Chart Colors */
+    --chart-1: 20 70% 65%; /* Warm Orange */
+    --chart-2: 160 55% 50%; /* Soft Teal */
+    --chart-3: 200 50% 45%; /* Muted Blue */
+    --chart-4: 50 70% 60%; /* Light Yellow */
+    --chart-5: 30 75% 70%; /* Warm Peach */
+
+    --radius: 0.6rem;
+
+    /* Sidebar */
+    --sidebar-background: 210 30% 96%;
+    --sidebar-foreground: 220 10% 30%;
+    --sidebar-primary: 210 70% 55%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 88%;
+    --sidebar-accent-foreground: 210 60% 45%;
+    --sidebar-border: 220 15% 78%;
+    --sidebar-ring: 210 70% 55%;
+  }
+
+  .dark {
+    --background: 220 15% 15%; /* Darker Navy */
+    --foreground: 220 10% 85%; /* Soft White */
+
+    --card: 220 15% 17%;
+    --card-foreground: 220 10% 90%;
+
+    --popover: 220 15% 17%;
+    --popover-foreground: 220 10% 90%;
+
+    --primary: 210 70% 65%; /* Soft Blue */
+    --primary-foreground: 220 10% 10%;
+
+    --secondary: 220 25% 25%; /* Dark Gray Blue */
+    --secondary-foreground: 220 10% 85%;
+
+    --muted: 220 10% 35%;
+    --muted-foreground: 220 10% 75%;
+
+    --accent: 280 60% 65%; /* Muted Purple */
+    --accent-foreground: 220 10% 10%;
+
+    --destructive: 0 55% 50%;
+    --destructive-foreground: 220 10% 90%;
+
+    --border: 220 15% 28%;
+    --input: 220 15% 28%;
+    --ring: 210 70% 65%;
+
+    /* Chart Colors */
+    --chart-1: 210 55% 55%;
+    --chart-2: 160 50% 50%;
+    --chart-3: 30 60% 55%;
+    --chart-4: 280 55% 60%;
+    --chart-5: 340 60% 55%;
+
+    /* Sidebar */
+    --sidebar-background: 220 15% 12%;
+    --sidebar-foreground: 220 10% 85%;
+    --sidebar-primary: 210 70% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 25%;
+    --sidebar-accent-foreground: 220 10% 85%;
+    --sidebar-border: 220 20% 30%;
+    --sidebar-ring: 210 70% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
