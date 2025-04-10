@@ -80,13 +80,18 @@ export default function Hero() {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button
               asChild
-              variant="secondary"
-              size="lg"
-              className="rounded-full bg-[#f8f4e3] text-[#b38728] hover:bg-[#f0e9d2]"
+              variant="outline"
+              size="sm"
+              className="rounded-full border-[#d4af37] text-[#b38728] p-6 hover:bg-[#fcf9ed] hover:border-[#b38728]"
             >
-              <a href="/resume.pdf" download="Aryan_Patel_Resume.pdf">
-                <FileDown className="mr-2 h-5 w-5" />
-                Download Resume
+              <a
+                href="/aaryan_resume.pdf"
+                download="aaryan_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileDown className="mr-2 h-4 w-4" />
+                Resume
               </a>
             </Button>
           </motion.div>

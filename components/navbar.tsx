@@ -90,7 +90,12 @@ export default function Navbar() {
               size="sm"
               className="rounded-full border-[#d4af37] text-[#b38728] hover:bg-[#fcf9ed] hover:border-[#b38728]"
             >
-              <a href="/aaryan_resume.pdf" download="Aryan_Patel_Resume.pdf">
+              <a
+                href="/aaryan_resume.pdf"
+                download="aaryan_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FileDown className="mr-2 h-4 w-4" />
                 Resume
               </a>
@@ -105,11 +110,16 @@ export default function Navbar() {
               asChild
               variant="outline"
               size="sm"
-              className="mr-2 rounded-full border-[#d4af37] text-[#b38728] hover:bg-[#fcf9ed] hover:border-[#b38728]"
+              className="rounded-full border-[#d4af37] text-[#b38728] hover:bg-[#fcf9ed] hover:border-[#b38728]"
             >
-              <a href="/resume.pdf" download="Aryan_Patel_Resume.pdf">
-                <FileDown className="h-4 w-4" />
-                <span className="sr-only">Download Resume</span>
+              <a
+                href="/aaryan_resume.pdf"
+                download="aaryan_resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FileDown className="mr-2 h-4 w-4" />
+                Resume
               </a>
             </Button>
           </motion.div>
